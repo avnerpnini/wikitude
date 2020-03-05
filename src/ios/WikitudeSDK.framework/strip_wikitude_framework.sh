@@ -76,7 +76,7 @@ else
 
     # check if $ARCHS is empty: if so, set it to the three default architectures
     if [ ${#ARCHS} -eq 0 ]; then
-      ARCHS="armv7 armv7s arm64"
+      ARCHS="armv7 armv7s"
     fi
 
     for WIKITUDE_SDK_ARCH in ${WIKITUDE_SDK_ARCHS_ARRAY[@]}

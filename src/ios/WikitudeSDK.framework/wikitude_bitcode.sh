@@ -68,7 +68,7 @@ else
         echo 'Reading bitcode information'
         WIKITUDE_SDK_ARCHS=$($(xcrun --sdk iphoneos --find lipo) -info "${WIKITUDE_FRAMEWORK_PATH}"/$FRAMEWORK_LIBRARY_NAME | sed -En -e 's/^(Non-|Architectures in the )fat file: .+( is architecture| are): (.*)$/\3/p')
 
-        DEFAULT_DEVICE_ARCHS=( "armv7" "armv7s" "arm64" )
+        DEFAULT_DEVICE_ARCHS=( "armv7" "armv7s")
         IFS=', ' read -r -a WIKITUDE_SDK_ARCHS_ARRAY <<< "$WIKITUDE_SDK_ARCHS"
         OTOOL_OUTPUT=""
         BITCODE_ENABLED_ARCHS=()
